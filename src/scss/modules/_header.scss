@@ -1,0 +1,119 @@
+.header {
+    background: url('./img/promo_bg.jpg') no-repeat center / cover;
+    height: 100vh;
+    &__top {
+        display: flex;
+        align-items: center;
+        padding: 57px 0;
+        gap: 100px;
+        justify-content: flex-end;
+        .logo {
+            path {
+                transition: fill .3s ease;
+            }
+            &:hover {
+                path {
+                    fill: $blue-color;
+                }
+            }
+        }
+    }
+    &__btn, &__phone {
+        font-family: 'Comfortaa', cursive;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+        transition: all .3s ease;
+    }
+    &__btn {
+        text-transform: uppercase;
+        color: #fff;
+        padding: 12px 71px;
+        background: $black-color;
+    }
+    &__phone {
+        color: $black-color;
+    }
+    &__content {
+        min-height: calc(100vh - 320px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        &-box {
+            max-width: 550px;
+            text-align: center;
+            color: #fff;
+            margin-right: 30px;
+        }
+    }
+    &__decor-text {
+        position: absolute;
+        color: $blue-color;
+        font-family: 'Comfortaa';
+        font-weight: 400;
+        font-size: 130px;
+        line-height: 145px;
+        &_1 {
+            bottom: -150px;
+            right: 55%;
+            z-index: 4;
+        }
+        &_2 {
+            bottom: -60px;
+            left: 60%;
+        }
+        &_3 {
+            bottom: -150px;
+            left: 60%;
+            z-index: 4;
+            max-width: 360px;
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+        }
+    }
+    &__title, &__text {
+        font-family: 'Comfortaa', cursive;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-size: 64px;
+        line-height: 72px;
+    }
+    &__text {
+        font-size: 24px;
+        line-height: 27px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('./img/promo_trees.png') no-repeat center / cover;
+        bottom: -350px;
+        left: 0;
+        right: 0;
+        height: 600px;
+        z-index: 2;
+    }
+}
+body {
+    &._cursor {
+        .header {
+            &__btn {
+                &:hover {
+                    background: $blue-color;
+                }
+            }
+            &__phone {
+                &:hover {
+                    color: $blue-color;
+                }
+            }
+        }
+    }
+}

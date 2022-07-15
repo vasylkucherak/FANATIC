@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;700;800&display=swap");
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  12% {
+    transform: scale(1.15);
+  }
+  25% {
+    transform: scale(1);
+  }
+  37% {
+    transform: scale(1.08);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+  pointer-events: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeOut {
+  animation-name: fadeOut;
+  pointer-events: none;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, header, footer, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  font-size: 18px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Inter";
+  font-weight: 400;
+  color: #262c27;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1230px;
+  /* @media (max-width: $pc) {
+      max-width: 970px;
+  }
+  @media (max-width: $tablet) {
+      max-width: 750px;
+  } */
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.header {
+  background: url("./img/promo_bg.jpg") no-repeat center/cover;
+  height: 100vh;
+}
+.header__top {
+  display: flex;
+  align-items: center;
+  padding: 57px 0;
+  gap: 100px;
+  justify-content: flex-end;
+}
+.header__top .logo path {
+  transition: fill 0.3s ease;
+}
+.header__top .logo:hover path {
+  fill: #0093A1;
+}
+.header__btn, .header__phone {
+  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  transition: all 0.3s ease;
+}
+.header__btn {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 71px;
+  background: #262c27;
+}
+.header__phone {
+  color: #262c27;
+}
+.header__content {
+  min-height: calc(100vh - 320px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.header__content-box {
+  max-width: 550px;
+  text-align: center;
+  color: #fff;
+  margin-right: 30px;
+}
+.header__decor-text {
+  position: absolute;
+  color: #0093A1;
+  font-family: "Comfortaa";
+  font-weight: 400;
+  font-size: 130px;
+  line-height: 145px;
+}
+.header__decor-text_1 {
+  bottom: -150px;
+  right: 55%;
+  z-index: 4;
+}
+.header__decor-text_2 {
+  bottom: -60px;
+  left: 60%;
+}
+.header__decor-text_3 {
+  bottom: -150px;
+  left: 60%;
+  z-index: 4;
+  max-width: 360px;
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+}
+.header__title, .header__text {
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.header__title {
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 72px;
+}
+.header__text {
+  font-size: 24px;
+  line-height: 27px;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  background: url("./img/promo_trees.png") no-repeat center/cover;
+  bottom: -350px;
+  left: 0;
+  right: 0;
+  height: 600px;
+  z-index: 2;
+}
+
+body._cursor .header__btn:hover {
+  background: #0093A1;
+}
+body._cursor .header__phone:hover {
+  color: #0093A1;
+}
