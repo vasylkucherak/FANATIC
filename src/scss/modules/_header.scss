@@ -1,13 +1,27 @@
 .header {
     background: url('./img/promo_bg.jpg') no-repeat center / cover;
     height: 100vh;
+    @media (max-aspect-ratio: 5/4) {
+        background-position: -430px 0%;
+    }
     &__top {
         display: flex;
         align-items: center;
         padding: 57px 0;
         gap: 100px;
+        @include adaptiv-value("gap", 100, 10, 0);
         justify-content: flex-end;
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+        @media (max-aspect-ratio: 5/4) {
+            justify-content: center;
+        }
         .logo {
+            svg {
+                @include adaptiv-value("width", 158, 118, 0);
+                @include adaptiv-value("height", 32, 24, 0);
+            }
             path {
                 transition: fill .3s ease;
             }
@@ -20,15 +34,18 @@
     }
     &__btn, &__phone {
         font-family: 'Comfortaa', cursive;
-        font-size: 20px;
         font-weight: 700;
         line-height: 22px;
         transition: all .3s ease;
+        @include adaptiv-value("font-size", 20, 14, 0);
     }
     &__btn {
         text-transform: uppercase;
         color: #fff;
-        padding: 12px 71px;
+        @include adaptiv-value("padding-top", 12, 2, 0);
+        @include adaptiv-value("padding-bottom", 12, 2, 0);
+        @include adaptiv-value("padding-left", 71, 20, 0);
+        @include adaptiv-value("padding-right", 71, 20, 0);
         background: $black-color;
     }
     &__phone {
@@ -40,20 +57,33 @@
         justify-content: flex-end;
         align-items: center;
         position: relative;
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+        @media (max-aspect-ratio: 5/4) {
+            justify-content: center;
+        }
         &-box {
             max-width: 550px;
             text-align: center;
             color: #fff;
             margin-right: 30px;
+            @media (max-width: 768px) {
+                margin-right: 0;
+            }
         }
     }
     &__decor-text {
+        padding: 0;
         position: absolute;
         color: $blue-color;
         font-family: 'Comfortaa';
         font-weight: 400;
-        font-size: 130px;
-        line-height: 145px;
+        @include adaptiv-value("font-size", 130, 50, 0);
+        line-height: 112.5%;
+        @media (min-width: 1920px) {
+            font-size: 130px;
+        }
         &_1 {
             bottom: -150px;
             right: 55%;
@@ -61,30 +91,33 @@
         }
         &_2 {
             bottom: -60px;
-            left: 60%;
+            left: 55%;
         }
         &_3 {
             bottom: -150px;
-            left: 60%;
+            left: 55%;
             z-index: 4;
-            max-width: 360px;
             font-family: 'Inter';
             font-style: italic;
             font-weight: 300;
-            font-size: 32px;
-            line-height: 39px;
+            @include adaptiv-value("font-size", 32, 16, 0);
+            @include adaptiv-value("max-width", 360, 140, 0);
             text-align: center;
+            @media (min-width: 1920px) {
+                font-size: 32px;
+            }
         }
     }
     &__title, &__text {
         font-family: 'Comfortaa', cursive;
         font-weight: 700;
         margin-bottom: 20px;
+        text-shadow: 0.05em .1em .1em rgba(0, 0, 0, 0.3);
     }
     &__title {
         text-transform: uppercase;
-        font-size: 64px;
-        line-height: 72px;
+        @include adaptiv-value("font-size", 64, 48, 0);
+        line-height: 112.5%;
     }
     &__text {
         font-size: 24px;

@@ -155,12 +155,32 @@ main {
   background: url("./img/promo_bg.jpg") no-repeat center/cover;
   height: 100vh;
 }
+@media (max-aspect-ratio: 5/4) {
+  .header {
+    background-position: -430px 0%;
+  }
+}
 .header__top {
   display: flex;
   align-items: center;
   padding: 57px 0;
   gap: 100px;
+  gap: calc(10px + ((100vw - 320px) / 1600 * 90));
   justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .header__top {
+    justify-content: center;
+  }
+}
+@media (max-aspect-ratio: 5/4) {
+  .header__top {
+    justify-content: center;
+  }
+}
+.header__top .logo svg {
+  width: calc(118px + ((100vw - 320px) / 1600 * 40));
+  height: calc(24px + ((100vw - 320px) / 1600 * 8));
 }
 .header__top .logo path {
   transition: fill 0.3s ease;
@@ -170,15 +190,18 @@ main {
 }
 .header__btn, .header__phone {
   font-family: "Comfortaa", cursive;
-  font-size: 20px;
   font-weight: 700;
   line-height: 22px;
   transition: all 0.3s ease;
+  font-size: calc(14px + ((100vw - 320px) / 1600 * 6));
 }
 .header__btn {
   text-transform: uppercase;
   color: #fff;
-  padding: 12px 71px;
+  padding-top: calc(2px + ((100vw - 320px) / 1600 * 10));
+  padding-bottom: calc(2px + ((100vw - 320px) / 1600 * 10));
+  padding-left: calc(20px + ((100vw - 320px) / 1600 * 51));
+  padding-right: calc(20px + ((100vw - 320px) / 1600 * 51));
   background: #262c27;
 }
 .header__phone {
@@ -191,19 +214,40 @@ main {
   align-items: center;
   position: relative;
 }
+@media (max-width: 768px) {
+  .header__content {
+    justify-content: center;
+  }
+}
+@media (max-aspect-ratio: 5/4) {
+  .header__content {
+    justify-content: center;
+  }
+}
 .header__content-box {
   max-width: 550px;
   text-align: center;
   color: #fff;
   margin-right: 30px;
 }
+@media (max-width: 768px) {
+  .header__content-box {
+    margin-right: 0;
+  }
+}
 .header__decor-text {
+  padding: 0;
   position: absolute;
   color: #0093A1;
   font-family: "Comfortaa";
   font-weight: 400;
-  font-size: 130px;
-  line-height: 145px;
+  font-size: calc(50px + ((100vw - 320px) / 1600 * 80));
+  line-height: 112.5%;
+}
+@media (min-width: 1920px) {
+  .header__decor-text {
+    font-size: 130px;
+  }
 }
 .header__decor-text_1 {
   bottom: -150px;
@@ -212,29 +256,34 @@ main {
 }
 .header__decor-text_2 {
   bottom: -60px;
-  left: 60%;
+  left: 55%;
 }
 .header__decor-text_3 {
   bottom: -150px;
-  left: 60%;
+  left: 55%;
   z-index: 4;
-  max-width: 360px;
   font-family: "Inter";
   font-style: italic;
   font-weight: 300;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: calc(16px + ((100vw - 320px) / 1600 * 16));
+  max-width: calc(140px + ((100vw - 320px) / 1600 * 220));
   text-align: center;
+}
+@media (min-width: 1920px) {
+  .header__decor-text_3 {
+    font-size: 32px;
+  }
 }
 .header__title, .header__text {
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   margin-bottom: 20px;
+  text-shadow: 0.05em 0.1em 0.1em rgba(0, 0, 0, 0.3);
 }
 .header__title {
   text-transform: uppercase;
-  font-size: 64px;
-  line-height: 72px;
+  font-size: calc(48px + ((100vw - 320px) / 1600 * 16));
+  line-height: 112.5%;
 }
 .header__text {
   font-size: 24px;
