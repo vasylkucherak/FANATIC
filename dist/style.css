@@ -239,7 +239,7 @@ main {
   padding: 0;
   position: absolute;
   color: #0093A1;
-  font-family: "Comfortaa";
+  font-family: "Comfortaa", cursive;
   font-weight: 400;
   font-size: calc(50px + ((100vw - 320px) / 1600 * 80));
   line-height: 112.5%;
@@ -253,16 +253,17 @@ main {
   bottom: -150px;
   right: 55%;
   z-index: 4;
+  opacity: 0.3;
 }
 .header__decor-text_2 {
   bottom: -60px;
   left: 55%;
+  opacity: 0.3;
 }
 .header__decor-text_3 {
   bottom: -150px;
   left: 55%;
   z-index: 4;
-  font-family: "Inter";
   font-style: italic;
   font-weight: 300;
   font-size: calc(16px + ((100vw - 320px) / 1600 * 16));
@@ -301,8 +302,94 @@ main {
 }
 
 body._cursor .header__btn:hover {
-  background: #0093A1;
+  background: #B9C400;
 }
 body._cursor .header__phone:hover {
-  color: #0093A1;
+  color: #B9C400;
+}
+
+.info {
+  margin-top: 130px;
+  background: url("./img/info_bg.jpg") no-repeat center/cover;
+}
+.info-top {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 600px;
+}
+.info-top__text {
+  position: relative;
+  padding-top: 260px;
+  width: 290px;
+  line-height: 112.5%;
+  color: #fff;
+}
+.info-top__text_with-btn {
+  padding-bottom: 110px;
+}
+.info-top__text_with-line {
+  border-bottom: 1px solid #fff;
+}
+.info-top__btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.info-top__img {
+  position: relative;
+  z-index: 2;
+}
+.info-specs {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 50px;
+}
+.info-specs__title {
+  width: 290px;
+  margin-right: 80px;
+  text-transform: uppercase;
+  font-family: "Comfortaa", cursive;
+  font-size: 60px;
+  line-height: 112.5%;
+}
+.info-specs__list {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 30px 0;
+  width: 565px;
+  font-weight: 700;
+}
+.info-specs__item {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 25px;
+}
+.info-specs__caption {
+  width: 184px;
+}
+.popup-btn {
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.popup-btn span, .popup-btn path, .popup-btn circle {
+  transition: 0.3s all;
+}
+.popup-btn span {
+  padding-top: 12px;
+  display: block;
+  color: #fff;
+  font-size: 18px;
+}
+
+body._cursor .popup-btn:hover path {
+  fill: #B9C400;
+}
+body._cursor .popup-btn:hover circle {
+  stroke: #B9C400;
+}
+body._cursor .popup-btn:hover span {
+  color: #B9C400;
 }
