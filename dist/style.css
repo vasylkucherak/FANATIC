@@ -497,3 +497,83 @@ body._touch .popup-btn:active circle {
 body._touch .popup-btn:active span {
   color: #B9C400;
 }
+
+.buy {
+  padding-top: 150px;
+}
+.buy__inner {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+.buy__content {
+  position: relative;
+  width: 510px;
+}
+.buy__title {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-family: "Comfortaa", cursive;
+  font-size: 58px;
+  line-height: 112.5%;
+  color: #0093A1;
+}
+.buy__list {
+  margin-bottom: 25px;
+}
+.buy__item {
+  margin-bottom: 25px;
+  width: 285px;
+}
+.buy__item-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  transition: color 0.3s;
+}
+.buy__price {
+  position: absolute;
+  bottom: 130px;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 35px;
+  background-image: url("./icons/star.svg");
+  transition: transform 0.3s;
+}
+.buy__btn {
+  margin-top: 25px;
+  width: 100%;
+  height: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Comfortaa", cursive;
+  color: #0093A1;
+  background-color: transparent;
+  border: 2px solid #0093A1;
+  font-size: 40px;
+  line-height: 80px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+body._cursor .buy__item:hover .buy__item-title {
+  color: #0093A1;
+}
+body._cursor .buy__btn:hover {
+  background-color: #B9C400;
+  color: #262c27;
+  border: 2px solid #B9C400;
+}
+body._cursor .buy__price:hover {
+  transform: scale(125%);
+}
+body.touch .buy__btn:active {
+  background-color: #B9C400;
+  color: #262c27;
+  border: 2px solid #B9C400;
+}
