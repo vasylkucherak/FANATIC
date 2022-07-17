@@ -25,11 +25,6 @@
             path {
                 transition: fill .3s ease;
             }
-            &:hover {
-                path {
-                    fill: $blue-color;
-                }
-            }
         }
     }
     &__btn, &__phone {
@@ -114,6 +109,8 @@
         font-weight: 700;
         margin-bottom: 20px;
         text-shadow: 0.05em .1em .1em rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 2;
     }
     &__title {
         text-transform: uppercase;
@@ -146,6 +143,34 @@ body {
             &__phone {
                 &:hover {
                     color: $green-color;
+                }
+            }
+            .logo {
+                &:hover {
+                    path {
+                        fill: $blue-color;
+                    }
+                }
+            }
+        }
+    }
+    &._touch {
+        .header {
+            &__btn {
+                &:active {
+                    background: $green-color;
+                }
+            }
+            &__phone {
+                &:active {
+                    color: $green-color;
+                }
+            }
+            .logo {
+                &:active {
+                    path {
+                        fill: $blue-color;
+                    }
                 }
             }
         }
