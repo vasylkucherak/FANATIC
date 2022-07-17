@@ -501,14 +501,41 @@ body._touch .popup-btn:active span {
 .buy {
   padding-top: 150px;
 }
+@media (max-width: 991.98px) {
+  .buy {
+    padding-top: 50px;
+  }
+}
 .buy__inner {
   display: flex;
   align-items: center;
   gap: 90px;
+  position: relative;
+}
+@media (max-width: 991.98px) {
+  .buy__inner {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 .buy__content {
   position: relative;
   width: 510px;
+}
+@media (max-width: 1230px) {
+  .buy__content {
+    z-index: 4;
+  }
+}
+@media (max-width: 991.98px) {
+  .buy__content {
+    order: 2;
+  }
+}
+@media (max-width: 590px) {
+  .buy__content {
+    width: 100%;
+  }
 }
 .buy__title {
   text-transform: uppercase;
@@ -518,12 +545,30 @@ body._touch .popup-btn:active span {
   line-height: 112.5%;
   color: #0093A1;
 }
+@media (max-width: 991.98px) {
+  .buy__title {
+    order: 2;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
 .buy__list {
   margin-bottom: 25px;
+}
+@media (max-width: 991.98px) {
+  .buy__list {
+    order: 3;
+  }
 }
 .buy__item {
   margin-bottom: 25px;
   width: 285px;
+}
+@media (max-width: 991.98px) {
+  .buy__item {
+    width: 100%;
+    text-align: center;
+  }
 }
 .buy__item-title {
   font-weight: 700;
@@ -545,6 +590,13 @@ body._touch .popup-btn:active span {
   background-image: url("./icons/star.svg");
   transition: transform 0.3s;
 }
+@media (max-width: 991.98px) {
+  .buy__price {
+    bottom: none;
+    top: -220px;
+    left: 0;
+  }
+}
 .buy__btn {
   margin-top: 25px;
   width: 100%;
@@ -559,6 +611,31 @@ body._touch .popup-btn:active span {
   line-height: 80px;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media (max-width: 991.98px) {
+  .buy__btn {
+    order: 1;
+  }
+}
+@media (max-width: 1230px) {
+  .buy__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 991.98px) {
+  .buy__img {
+    position: static;
+    transform: translateY(0);
+    order: 1;
+  }
+}
+@media (max-width: 590px) {
+  .buy__img {
+    width: 100%;
+  }
 }
 
 body._cursor .buy__item:hover .buy__item-title {
