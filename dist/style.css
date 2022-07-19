@@ -808,3 +808,77 @@ body.touch .buy__btn:active {
   width: 73.333%;
   border-bottom-left-radius: 400px;
 }
+
+.footer {
+  padding: 100px 0 80px;
+  background-color: #262c27;
+  color: #fff;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__form {
+  max-width: 500px;
+}
+.footer__title {
+  font-family: "Comfortaa", cursive;
+  font-size: 60px;
+  line-height: 112.5%;
+  margin-bottom: 27px;
+  text-transform: uppercase;
+}
+.footer__form-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 57px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+}
+.footer__form-input::placeholder {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 112.5%;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.footer__form-btn {
+  font-family: "Comfortaa", cursive;
+  background-color: #fff;
+  padding: 10px 66px;
+  border: none;
+  margin-bottom: 110px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 112.5%;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+}
+.footer__social-title {
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.footer__gallery {
+  display: grid;
+  gap: 52px;
+  grid-template: auto/repeat(4, 1fr);
+  margin-bottom: 50px;
+}
+.footer__gallery-item {
+  width: 100%;
+  object-fit: cover;
+}
+.footer__menu-list {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__menu-link {
+  color: #fff;
+}
