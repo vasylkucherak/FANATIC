@@ -822,9 +822,13 @@ body.touch .buy__btn:active {
   width: calc(259.7px + ((100vw - 320px) / 1600 * 111.3));
   height: calc(57.4px + ((100vw - 320px) / 1600 * 24.6));
 }
+.footer__logo svg path {
+  transition: all 0.3s;
+}
 .footer__top {
   display: flex;
   justify-content: space-between;
+  align-items: start;
 }
 @media (max-width: 767.98px) {
   .footer__top {
@@ -880,6 +884,7 @@ body.touch .buy__btn:active {
   font-weight: 700;
   color: #000;
   cursor: pointer;
+  transition: all 0.3s;
 }
 @media (max-width: 767.98px) {
   .footer__form-btn {
@@ -907,15 +912,22 @@ body.touch .buy__btn:active {
     flex-wrap: wrap;
   }
 }
-.footer__gallery-item {
+.footer__gallery-link {
   width: 23.5%;
-  object-fit: cover;
+  overflow: hidden;
 }
 @media (max-width: 767.98px) {
-  .footer__gallery-item {
+  .footer__gallery-link {
     width: 48%;
     margin-bottom: 4%;
   }
+}
+.footer__gallery-item {
+  margin-top: -2px;
+  margin-bottom: -1px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
 }
 .footer__menu-list {
   font-weight: 700;
@@ -939,4 +951,30 @@ body.touch .buy__btn:active {
   max-height: 21px;
   white-space: nowrap;
   color: #fff;
+  transition: color 0.3s;
+}
+
+body._cursor .footer__logo:hover path {
+  fill: #0093A1;
+}
+body._cursor .footer__gallery-link:hover .footer__gallery-item {
+  transform: scale(1.12);
+}
+body._cursor .footer__form-btn:hover {
+  background-color: #B9C400;
+}
+body._cursor .footer__menu-link:hover {
+  color: #0093A1;
+}
+body._touch .footer__logo:active path {
+  fill: #0093A1;
+}
+body._touch .footer__gallery-link:active .footer__gallery-item {
+  transform: scale(1.12);
+}
+body._touch .footer__form-btn:active {
+  background-color: #B9C400;
+}
+body._touch .footer__menu-link:active {
+  color: #0093A1;
 }
