@@ -1,24 +1,39 @@
 //! Підвал сайту
 
 .footer {
-    padding: 100px 0 80px;
+    @include adaptiv-value("padding-top", 100, 25, 0);
+    @include adaptiv-value("padding-bottom", 56, 14, 0);
     background-color: $black-color;
     color: #fff;
+    &__logo {
+        margin-bottom: 30px;
+        svg {
+            @include adaptiv-value("width", 371, 259.7, 0);
+            @include adaptiv-value("height", 82, 57.4, 0);
+        }
+    }
     &__top {
         display: flex;
         justify-content: space-between;
-    }
-    &__form {
-        max-width: 500px;
+        @media (max-width: $mobile) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
     &__title {
         font-family: 'Comfortaa', cursive;
-        font-size: 60px;
+        @include adaptiv-value("font-size", 60, 32, 0);
         line-height: 112.5%;
         margin-bottom: 27px;
         text-transform: uppercase;
+        text-align: center;
     }
     &__form {
+        max-width: 500px;
+        @media (max-width: $mobile) {
+            max-width: 600px;
+            width: 100%;
+        }
         &-input {
             background-color: transparent;
             border: none;
@@ -44,40 +59,63 @@
             background-color: #fff;
             padding: 10px 66px;
             border: none;
-            margin-bottom: 110px;
+            @include adaptiv-value("margin-bottom", 110, 50, 0);
             text-transform: uppercase;
             font-size: 20px;
             font-weight: 112.5%;
             font-weight: 700;
             color: #000;
             cursor: pointer;
+            @media (max-width: $mobile) {
+                width: 100%;
+            }
         }
-    }
-    &__logo {
     }
     &__social-title {
         margin-bottom: 25px;
         font-weight: 700;
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
     }
     &__gallery {
-        display: grid;
-        gap: 52px;
-        grid-template: auto / repeat(4, 1fr);
-        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+        gap: 2%;
+        @include adaptiv-value("margin-bottom", 50, 25, 0);
+        @media (max-width: $mobile) {
+            gap: 4%;
+            flex-wrap: wrap;
+        }
         &-item {
-            width: 100%;
+            width: calc(94% / 4);
             object-fit: cover;
+            @media (max-width: $mobile) {
+                width: calc(96% / 2);
+                margin-bottom: 4%;
+            }
         }
     }
     &__menu {
         &-list {
             font-weight: 700;
             display: flex;
+            gap: 4%;
             justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width: 440px) {
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
         }
         &-item {
+            max-height: 21px;
+            margin-bottom: 15px;
         }
         &-link {
+            max-height: 21px;
+            white-space: nowrap;
             color: #fff;
         }
     }
